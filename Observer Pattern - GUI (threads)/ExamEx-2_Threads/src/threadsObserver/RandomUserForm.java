@@ -12,15 +12,25 @@ import randomperson.RandomUser;
  *
  * @author Lars Mortensen
  */
-public class RandomUserForm extends javax.swing.JFrame {
+public class RandomUserForm extends javax.swing.JFrame  implements Observer {
 
   /**
    * Creates new form RandomUserForm
    */
   public RandomUserForm() {
     initComponents();
+    randomUserControl.addObserver(this);
   }
 
+  @Override
+  public void update(Observable obs, Object obj){
+    RandomUser random = (RandomUser)obj;
+    textFirstName.setText(random.getFirstName());
+    textLastName.setText(random.getLastName());
+    textStreet.setText(random.getStreet());
+    textCity.setText(random.getCity());
+    textEmail.setText(random.getEmail());
+  }
   /**
    * This method is called from within the constructor to initialize the form.
    * WARNING: Do NOT modify this code. The content of this method is always
@@ -131,14 +141,7 @@ public class RandomUserForm extends javax.swing.JFrame {
 
 
   private void btn1Clicked(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1Clicked
-    RandomUser random = randomUserControl.fetchRandomUser();
-    textFirstName.setText(random.getFirstName());
-    textLastName.setText(random.getLastName());
-    textStreet.setText(random.getStreet());
-    textCity.setText(random.getCity());
-    textEmail.setText(random.getEmail());
-
-
+    randomUserControl.fetchRandomUser();
   }//GEN-LAST:event_btn1Clicked
 
   private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
