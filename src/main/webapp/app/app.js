@@ -6,8 +6,8 @@ angular.module('myApp', [
 ]).
         config(['$routeProvider', function ($routeProvider) {
                 $routeProvider.otherwise({redirectTo: '/home'}),
-                        $routeProvider.when('/example', {
-                            templateUrl: 'app/views/example.html'
+                        $routeProvider.when('/home', {
+                            templateUrl: 'app/views/home/home.html'
                                     //controller: '',
                                     //controllerAs: 'ctrl'
                         });
