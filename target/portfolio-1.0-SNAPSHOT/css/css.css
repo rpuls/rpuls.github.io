@@ -1,0 +1,14 @@
+#face {
+    display: block;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+#face:hover {
+    opacity: 1;
+}
+
+#infoDiv {
+    width: inherit; 
+    color: #bfbfbf;
+}

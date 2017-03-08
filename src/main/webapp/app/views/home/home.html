@@ -1,1 +1,84 @@
-Home view test
+<style>
+    .vertical-center {
+        min-height: 100%;
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .bottom-align {
+
+    }
+
+    #footer {
+        height: 100px;
+        position: relative;
+        width: 800px;
+    }
+
+    #footer .inner {
+        bottom: 0px;
+        position: absolute;
+        text-align: center;
+        color: #bfbfbf;
+        width: 100%;
+    }
+</style>
+<div  class="container-fluid vertical-center">
+
+    <div>
+        <!-- header -->
+        <div  class="row">
+            <div  class="col-lg-12">
+
+            </div>
+        </div>
+        <!-- tiles -->
+        <div  class="row ">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="#/coding" class="thumbnail">
+                        <img src="app/views/home/code.png" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>Coding</h3>
+                        <p>Welcome to code world. This section focuses on coding projects that i have done or been part of. Here you might find
+                            java, html, Angular.js, css, javascript, kotlin & many other coding languages used in my projects.<br><br></p>
+                        <p><a href="#/coding" class="btn btn-default" role="button">visit</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="#/games" class="thumbnail">
+                        <img src="app/views/home/game.PNG" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>Games</h3>
+                        <p>As a computer science student and former gamer you would expect some game development right? This section will be focusing
+                            on game development in Unity and in greenfoot. I might add content from other frameworks in the future.</p>
+                        <p><a href="#/games" class="btn btn-default" role="button">view</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="#/graphics" class="thumbnail">
+                        <img src="app/views/home/graphic.png" alt="...">
+                    </a>
+                    <div class="caption">
+                        <h3>Graphics</h3>
+                        <p>In this section i have picked out some of my graphical work. Most of the content is rendered 3d object, and even animations.
+                            This section can include work i have done in photoshop or illustrator as well.<br><br></p>
+                        <p><a href="#/graphics" class="btn btn-default" role="button">check</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bottom -->
+        <div id="footer">
+            <div class="inner"><p>Made by Rasmus Puls - I claim copyright on ALL content on this website</p></div>
+        </div>
+    </div>
+</div>
