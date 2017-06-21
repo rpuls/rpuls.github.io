@@ -1,0 +1,130 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-8">
+
+            <!-- Blog Post -->
+
+            <!-- Title -->
+            <h1>NØRREBRO ON THE GROUND - City guide, angular.js app</h1>
+
+            <!-- Author -->
+            <p class="lead">
+                by <a href="#">Rasmus Puls</a><br>
+                co developers <a href="#">Cherry Rose</a>, <a href="#">Timm Rasmussen</a>, <a href="#">Waqas Mohiuddin</a>
+            </p>
+
+            <hr>
+
+            <!-- Date/Time -->
+            <p><span class="glyphicon glyphicon-time"></span> Posted on Febuary 23, 2017 at 10:57 PM</p>
+
+            <hr>
+            <p class="lead">Please try the demo right here!</p>
+            <p>A live demo is running inside the iPhone below, it might be a little "buggy" right here, since it is placed inside an ifram, 
+                nested inside a ng-include directive, which is nested inside a ng-view directive. You can also visit 
+                <a href="https://www.nbrog.dk">NØRREBRO ON THE GROUND</a> at the official website. All shops on the map is clickable,
+                an uib-modal will pop up when a shop is clicked, displaying some details about it. Please scroll down below the iPhone demo
+                to read more about this project</p>
+            <!-- Preview Image -->
+            <h1 style="color: red">OBS! demo only working on same origin!</h1>
+            <p style="color: red">To test demo please visit <a href="http://35.166.25.2/#/coding">my personal server</a> or go to <a href="http://www.nbrog.dk">www.nbrog.dk</a> too see the webapp itself</p>
+
+            <div style="height: 1469px; background-image: url('app/views/coding/posts/nbrog/iPhone750p.png')">
+                <script>
+                    var d = new Date(); // for now
+                    var hh = "0" + d.getHours();
+                    var mm = "0" + d.getMinutes();
+                    if (hh.length > 2) {
+                        hh = d.getHours();
+                    }
+                    if (mm.length > 2) {
+                        mm = d.getMinutes();
+                    }
+                    $("#time").text(hh + ":" + mm);
+                </script>
+                <div style="position: relative; text-align: center; top: 150px;">
+                    <h3><span id="time"></span></h3>
+                </div>
+                <div>
+                    <iframe style="
+                            position: relative;
+                            left: 37px;
+                            top: 145px;
+                            width: 676px;
+                            height: 1105px;
+                            border-width: 0px;"
+                            src="https://www.nbrog.dk"></iframe>
+                </div>
+            </div>
+            <br>
+            <!-- Post Content -->
+            <p class="lead">By far my biggest "coding" project, involving school, work, free time & many people</p>
+            <p>As part of the community in Nørrebro, VINTRO (the wine shop I currently work in) has designed a map of local 
+                businesses and called it: “Nørrebro On-the-Ground”. It started as a business community in Nørrebro with more than
+                350 shops. The map was printed on 25,000 A2 posters and are distributed in east and west. 4 newspapers 
+                mentioned this map and since then, an app was sought by many, but never been developed. As part of my last case assignment
+                and final semester project on 3rd semester at cph business computer science, I convinces my study group to do our own project instead
+                of going for the assignment the school was giving. The teachers, and my study group quickly accepted my request so we were good
+                to go developing this web application which would be very useful as a promotion tool for the shop owner,
+                and for us as students we would make use of what we have learned from this semester, and nurture our skills while encountering a bunch of problems.
+            </p>
+            <p class="lead">So how is it built?</p>
+            <p>
+                The app has a front end written in HTML5, CSS including several bootstrap-like frameworks and stylesheets, some jQuery and JavaScript
+                is used aswell, but we have tried to stick only to Angular.js to keep a convention! On the server everything is written in Java, we are
+                using ORM (JPA) for persistence and are swithcing between several persistence units that makes it possible to run test on the in memory
+                derby test database. For offline data maintenance I use a local instance of the online DB both are mySQL databases. As deploy server we
+                are using a instance of Tomcat 8, 2 servers running on digital ocean droplets, and one running on AWS (amazon), we have a database running
+                on amazon, and one running on digital ocean. On the server side we have implemented some pretty cool features, first of all we are using
+                a highly secured REST api, users passwords is hashed, salted and we are of course using a very slow hashing algorithm. All REST calls have
+                been secured by "user roles", and no personal vulnerable data is stored in plain text!
+            <h2 style="text-align: center">
+                <i class="fa fa-html5" aria-hidden="true"></i> 
+                <i class="fa fa-css3" aria-hidden="true"></i> 
+                <i class="fa fa-database" aria-hidden="true"></i> 
+                <i class="fa fa-file-code-o" aria-hidden="true"></i> 
+                <i class="fa fa-server" aria-hidden="true"></i> 
+                <i class="fa fa-code-fork" aria-hidden="true"></i>
+            </h2>
+            </p>
+            <p class="lead">Anything else it does?</p>
+            <p>
+                Another cool feature that we implemented is the "google auto updater" which I personally have spent many hours on and think is pretty cool!
+                One of the learning goals of 3rd semester was to do api calls to extern services. The school assignment was based on api calls to a public
+                flight service, but that didn't fit in our project. So we decided to try out google's "places api." By giving each shop a google place id we are
+                able to iteratively update information about every shop, such as address, house number, zip code, city, email, website, phone number. The updater
+                service will run once every day, but only for shops that haven't been manually edited. In case a shop owner want a specific email on his/her page
+                then the google auto updater should of course not overwrite it the next day. The app also contain a 100% self written picture upload system
+                that writes files to the server and also saves them as a data stream (blob) in the database, this was the biggest pain in the *** ever, and it is still
+<<<<<<< HEAD
+                not flawless. I don't think I will every create another self written file upload service myself, at least not with java! ;)
+=======
+                not flawless. I don't think I will ever create another self written file upload service myself, at least not with java! ;)
+>>>>>>> 7290390ee4da12cfffe04b35d92aad3e74857943
+            </p>
+            <p class="lead">Experience gained/skills enhanced by working on this project:</p>
+            <ul>
+                <li><i class="fa fa-line-chart" aria-hidden="true"></i> SCRUM & XP, with tools like waffle.io + github</li>
+                <li><i class="fa fa-file-code-o" aria-hidden="true"></i> Angular.js</li>
+                <li><i class="fa fa-file-code-o" aria-hidden="true"></i> JavaScript</li>
+                <li><i class="fa fa-css3" aria-hidden="true"></i> CSS</li>
+                <li><i class="fa fa-html5" aria-hidden="true"></i> HTML5</li>
+                <li><i class="fa fa-file-code-o" aria-hidden="true"></i> Java</li>
+                <li><i class="fa fa-retweet" aria-hidden="true"></i> REST api, building REST services in java</li>
+                <li><i class="fa fa-database" aria-hidden="true"></i> JPA (ORM)</li>
+                <li><i class="fa fa-paint-brush" aria-hidden="true"></i> Vector graphic</li>
+                <li><i class="fa fa-server" aria-hidden="true"></i> Server setup; Digital ocean & amazon AWS (both linux)</li>
+                <li><i class="fa fa-unlock-alt" aria-hidden="true"></i> Web security (advanced and modern, but not every aspect)</li>
+                <li><i class="fa fa-globe" aria-hidden="true"></i> Web site managing, server load, speed test, cross browser compatibility</li>
+                <li><i class="fa fa-file-code-o" aria-hidden="true"></i> jQuery</li>
+                <li><i class="fa fa-css3" aria-hidden="true"></i> Bootstrap (and other libraries)</li>
+                <li><i class="fa fa-cogs" aria-hidden="true"></i> Continuous integration with Travis-ci.org</li>
+                <li><i class="fa fa-code-fork" aria-hidden="true"></i> Git</li>
+                <li><i class="fa fa-globe" aria-hidden="true"></i> Outsourcing - Yes we even outsourced some of the CSS styling <a href="https://docs.google.com/document/d/131sseRd8Dcui-w7Awk_W8SR8lTfGi0Kz7pVxAgVQlLc/edit?usp=sharing">view requirements document.</a></li>
+            </ul>
+            <hr>
+        </div>
+    </div> <!-- /.row -->
+</div> <!-- /.container -->
