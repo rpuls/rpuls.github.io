@@ -1,0 +1,89 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-8">
+
+            <!-- Blog Post -->
+
+            <!-- Title -->
+            <h1>Yatzy dice game & score manager for Android!</h1><a name="yatzy"></a>
+
+            <!-- Author -->
+            <p class="lead">
+                by <a href="#">Rasmus Puls</a>
+            </p>
+
+            <hr>
+
+            <!-- Date/Time -->
+            <p><span class="glyphicon glyphicon-time"></span> Posted on Febuary 09, 2017 at 9:00 PM</p>
+
+            <hr>
+
+            <!-- Preview Image -->
+            <div class="ytratio">
+                <iframe id="ytvid" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <hr>
+
+            <!-- Post Content -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="lead">Started as my android course exam project, but are much more now!</p>
+                    <p>My girlfriend and I like to play Yatzy (or Yahtzee) when we go out for beers or coffee during the daytime.
+                        Sometimes we forget to bring the score sheet block at home, but usually the cafés have a piece of
+                        paper and a pen they will lent us. One day we were at a café that had neither pen or paper to offer,
+                        my solution was to use my girlfriends phones "note app" and keep track of the score with that. Quickly
+                        I realised that I quite easily and fast could make an app that looks like the scoreboard and be a
+                        little more nice to use than the note app. Few weeks later I was going to Italy for a wine fair (vinitaly)
+                        with some colleges, and to kill time in the airport and during the flight I managed to write the
+                        entire "yahtzee sheets" app which I later renamed to Yatzy Sheets due to fear of trade mark rights
+                        of the name "Yahtzee" owned by Hasbro. I started hard coding they layout as XML, but as my teachers
+                        at cphbusiness requested i must include the anko libraries in order to get a decent grade in the
+                        end of the course. I decided to continue the app development and use it for my exam project so I
+                        rewrote the layout to be dynamically generated, which made it a lot easier to implement a "game setup
+                        system" and add more players since each column of the score sheet is generated dynamically. To make
+                        the app advanced enough to use as exam project I obviously had to implement more features that would
+                        touch the curriculum. I added:
+                        <ul>
+                            <li>A SQLite database, and db controller that would save all scores of all played games</li>
+                            <li>anko libraries to access XML id's easily, and keep the code simple and readable</li>
+                            <li>String values in the "res" folder to support multiple languages in the app</li>
+                            <li>A dialog fragment that will let the user setup a game with unlimited amount of players</li>
+                            <li>A broadcast receiver that will watch the battery level and warn the user if it drops</li>
+                            <li>At last I created a 3D dice rolling game in unity and implemented, this made me achieve top grade
+                                for this exam project! I have a dedicated post about the unity part <a href="app/views/games/yatzy/yatzy.html#yatzy">here</a>!</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <img style="display: block; margin: auto;" src="app/views/coding/posts/yatzy/roll.png" alt="" />
+                    <br>
+                    <p class="lead">Anything else it does?</p>
+                    <p>After the exam I continued the development because I really liked the project, and because I see potential
+                        in an app like this. Later on I have wanted to gain experience with other fields of android development,
+                        e.g. advertising in apps. Therefore I signed up a google adMob account and followed a tutorial on
+                        how to monetize your app. Currently my app shows one banner ad in the game setup dialog, so I potentially
+                        will earn a little revenue based on how many new games are started, since the ad will be shown once
+                        every time someone press "start game"
+                    </p>
+                    <br>
+                    <img style="display: block; margin: auto;" src="app/views/coding/posts/yatzy/ad.png" alt="" />
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+
+            <p>Download game for <i class="fa fa-android" aria-hidden="true"></i> Android from:</p>
+            <a href=''><img style="width: 50%" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+
+            <hr>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
