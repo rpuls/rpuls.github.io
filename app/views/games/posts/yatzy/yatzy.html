@@ -8,7 +8,7 @@
 
             <!-- Title -->
             <h1>Yatzy dice game & score manager for Android!</h1><a name="yatzy"></a>
-
+            <img class="col-lg-3 col-md-4 col-sm-5" src="app/views/games/posts/yatzy/yatzy.png"/>
             <!-- Author -->
             <p class="lead">
                 by <a href="#">Rasmus Puls</a>
@@ -33,7 +33,7 @@
                 <div class="col-lg-12">
                     <p class="lead">As part in my android <a href="">yatzy app</a> I developed a dice rolling game!</p>
                     <p>
-                        What is a yatzy score manager app without a little sidekick of a dice rolling game? What if you lose a die doen a sewer drain
+                        What is a yatzy score manager app without a little sidekick of a dice rolling game? What if you lose a die down a sewer drain
                         in the middle of a game? Yes I fired up unity to build my very own dice rolling game for yatzy, and
                         I wanted to make it special by using simulated physics to roll the dices. In blender I created a
                         die model & a cup which i both imported to unity and made prefabs of. I added a special mesh collider
@@ -45,18 +45,28 @@
                         at any time.
                     </p>
                     <br>
-                    <img style="display: block; margin: auto;" src="app/views/games/posts/yatzy/roll.png" alt="" />
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12"><imgstyle="display: block; margin: auto;" src="app/views/games/posts/yatzy/capture6.png" alt="" /></div>
+                        <div class="col-lg-4 col-md-4 col-sm-12"><imgstyle="display: block; margin: auto;" src="app/views/games/posts/yatzy/capture4.png" alt="" /></div>
+                        <div class="col-lg-4 col-md-4 col-sm-12"><imgstyle="display: block; margin: auto;" src="app/views/games/posts/yatzy/capture5.png" alt="" /></div>
+                    </div>
+
                     <br>
-                    <p class="lead">Anything else it does?</p>
-                    <p>After the exam I continued the development because I really liked the project, and because I see potential
-                        in an app like this. Later on I have wanted to gain experience with other fields of android development,
-                        e.g. advertising in apps. Therefore I signed up a google adMob account and followed a tutorial on
-                        how to monetize your app. Currently my app shows one banner ad in the game setup dialog, so I potentially
-                        will earn a little revenue based on how many new games are started, since the ad will be shown once
-                        every time someone press "start game"
+                    <p class="lead">So how does it work?</p>
+                    <p>
+                        I wanted it to be unique. There is plenty of dice rolling app out there, but I don't think there is any other
+                        than mine that uses simulated physics to roll the dices (correct me if i'm wrong). Each die has a rigidbody, a box
+                        collider & a material that describes bouncyness and friction etc. When the player press the roll button each die is
+                        positioned inside the cup (still not active), then they are one by one rotated random(0-360) on each axis x,y,z and 
+                        at last all of them are activated so th gravity applies and they wil fall out of the cup and bounce when they hit the
+                        collider of the cup, each other and the ground surface. In this way it is almost impossible to have to equal rolls,
+                        at least extremly unlikely. Though it is a neat fueature to have simulated physics it does come with some "consequences". 
+                        Due to it's relation to reality it does happen sometime that the dices will end up leaning on each other or even be on 
+                        top of another die. The Yatzy & Yahtzee rules states that this is an invalid roll, and should be rerolled. There fore i
+                        implemented the "next player" button that resets the game.
                     </p>
                     <br>
-                    <img style="display: block; margin: auto;" src="app/views/games/posts/yatzy/ad.png" alt="" />
+                    <img class="col-lg-12" style="display: block; margin: auto;" src="app/views/games/posts/yatzy/special.png" alt="" />
                     <p>
 
                     </p>
