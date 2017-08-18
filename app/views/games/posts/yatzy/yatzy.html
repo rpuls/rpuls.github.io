@@ -17,7 +17,7 @@
                     </p>
                     <hr>
                     <!-- Date/Time -->
-                    <p><span class="glyphicon glyphicon-time"></span> Posted on Febuary 09, 2017 at 9:00 PM</p>
+                    <p><span class="glyphicon glyphicon-time"></span> Posted on August 09, 2017 at 15:10 PM</p>
                     <hr>
                 </div>
             </div>
@@ -40,8 +40,8 @@
                         I wanted to make it special by using simulated physics to roll the dices. In blender I created a
                         die model & a cup which i both imported to unity and made prefabs of. I added a special mesh collider
                         to the cup that would keep the dices from falling through the sides and bottom, since mesh colliders
-                        are expensive and "bad practice" due to their level of complextity I came up with my own idea. I
-                        went inside sketchup and created a very simplyfied version of the cup and sized it to fit inside
+                        are expensive and "bad practice" due to their level of complexity I came up with my own idea. I
+                        went inside sketchup and created a very simplified version of the cup and sized it to fit inside
                         between the outer and inner walls of the graphical cup, I then used that model to generate a much
                         more simple mesh collider and positioned that model inside the graphical model so it is not visible
                         at any time.
@@ -58,13 +58,13 @@
                     <p>
                         I wanted it to be unique. There is plenty of dice rolling app out there, but I don't think there is any other
                         than mine that uses simulated physics to roll the dices (correct me if i'm wrong). Each die has a rigidbody, a box
-                        collider & a material that describes bouncyness and friction etc. When the player press the roll button each die is
+                        collider & a material that describes bounciness and friction etc. When the player press the roll button each die is
                         positioned inside the cup (still not active), then they are one by one rotated random(0-360) on each axis x,y,z and 
-                        at last all of them are activated so th gravity applies and they wil fall out of the cup and bounce when they hit the
+                        at last all of them are activated so the gravity applies and they will fall out of the cup and bounce when they hit the
                         collider of the cup, each other and the ground surface. In this way it is almost impossible to have to equal rolls,
-                        at least extremly unlikely. Though it is a neat fueature to have simulated physics it does come with some "consequences". 
-                        Due to it's relation to reality it does happen sometime that the dices will end up leaning on each other or even be on 
-                        top of another die. The Yatzy & Yahtzee rules states that this is an invalid roll, and should be rerolled. There fore i
+                        at least extremely unlikely. Though it is a neat feature to have simulated physics it does come with some "consequences". 
+                        Due to its relation to reality it does happen sometime that the dices will end up leaning on each other or even be on 
+                        top of another die. The Yatzy and Yahtzee rules states that this is an invalid roll, and should be rerolled. Therefore i
                         implemented the "next player" button that resets the game.
                     </p>
                     <br>
